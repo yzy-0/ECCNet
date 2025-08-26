@@ -58,7 +58,7 @@ class MaxEntropyHintFusion(nn.Module):
 
         return output, (rgb_local_entropy + depth_local_entropy)/2
 
-class Expert_seg(nn.Module):
+class ECCNet-Exp(nn.Module):
     def __init__(self, num_class=41, embed_dims=[64, 128, 320, 512]):
         super(Expert_seg, self).__init__()
 
@@ -93,7 +93,7 @@ class Expert_seg(nn.Module):
         print('self.backbone_dmit loading')
 
 if __name__ == '__main__':
-    net = Expert_seg()
+    net = ECCNet-Exp()
     rgb = torch.randn([2, 3, 480, 640])
     d = torch.randn([2, 3, 480, 640])
     s = net(rgb, d)
