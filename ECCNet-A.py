@@ -223,7 +223,7 @@ class AdaptiveSegFormerHead(nn.Module):
         return output, x_0, x_1, x_2
 
 
-class AdaptiveSegFormer(nn.Module):
+class ECCNet-Aux(nn.Module):
     def __init__(self, num_classes=41):
         super().__init__()
         self.rgb_d = mit_b2()
@@ -309,7 +309,7 @@ class AdaptiveSegFormer(nn.Module):
 # 使用示例
 if __name__ == "__main__":
     # 创建模型
-    model = AdaptiveSegFormer(num_classes=40)
+    model = ECCNet-Aux(num_classes=40)
 
     # 测试输入
     rgb = torch.randn([2, 3, 480, 640])
